@@ -32,7 +32,7 @@ class NotesViewModel(
         }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
 
-    val _state = MutableStateFlow(NotesState())
+    private val _state = MutableStateFlow(NotesState())
     val state =
         combine(_state, isSortedByDateAdded, notes) { currentstate, isSortedByDateAdded, notes ->
             currentstate.copy(

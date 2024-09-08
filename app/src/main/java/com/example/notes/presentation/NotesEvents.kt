@@ -1,6 +1,5 @@
 package com.example.notes.presentation
 
-import android.icu.text.CaseMap.Title
 import com.example.notes.data.Note
 
 sealed class NotesEvent {
